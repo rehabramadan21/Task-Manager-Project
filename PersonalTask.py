@@ -1,1 +1,16 @@
-pass
+from Task import task
+class personalTask(task):
+    def __init__(self, title , description , dueDate , status="incomplete",category="Personal Task"):
+        super(personalTask, self).__init__(title , description , dueDate , status="incomplete")
+        self.__category=category
+
+    def set_category(self,category="general"):
+        self.__category=category
+    def get_category(self):
+        return self.__category
+    def get_type(self):
+        print("Personal Task")
+    def display(self):
+        super().display()
+        print("Category: "+ self.__category)
+
