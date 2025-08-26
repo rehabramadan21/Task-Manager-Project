@@ -1,15 +1,9 @@
 class newUser:
     def __init__(self,name="unknown",password="0000",id=0):
-        if name.isalpha():
-            self.__name=name
-            self.__password=password
-            self.__id=id
-        else: print("this name unavaliable")
+        self.__name=name
+        self.__password=password
+        self.__id=id
 
-    def set_name(self,newName="unknown"):
-        if newName.isalpha():
-            self.__name=newName
-        else: print("this name unavaliable")
     def set_pass(self, newPassword,currentPassword):
         if currentPassword == self.__password :
             self.__password=newPassword
@@ -22,3 +16,17 @@ class newUser:
         return self.__password
     def get_id(self):
         return self.__id
+    def dispalyUser(self):
+        print("name : " +str(self.__name))
+        print("ID: "+str(self.__id))
+        print("password: "+str(self.__password))
+    def Person_As_dictionry(self):
+        return {
+            "name": self.__name,
+            "id":self.__id,
+            "password":self.__password,
+            "tasks":{
+                "personal":[],
+                "work":[]
+            }
+        }
