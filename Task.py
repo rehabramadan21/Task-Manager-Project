@@ -1,4 +1,4 @@
-class task() :
+class task:
     def __init__(self , title , description , dueDate , status="incomplete"):
         self.__title = title
         self.__description = description
@@ -41,9 +41,8 @@ class task() :
         print("description: " + self.__description)
         print("dueDate: " + self.__dueDate)
         print("status: " + self.__status)
-
     #####################هنشوف لو محتاجناهاش نمسحها ####################
-    def As_a_dictionry(self):
+    def As_a_dictionary(self):
         return {
         "title": self.__title,
         "description": self.__description,
